@@ -20,4 +20,19 @@ export const assert = {
       throw new Error(`Expected ${expected}, but got ${actual}`);
     }
   },
+
+  throws(fn, expectedMessage) {
+    let threw = false;
+    try {
+      fn();
+    } catch (e) {
+      threw = true;
+      if (expectedMessage && e.message !== expectedMessage) {
+        throw new Error(`Expected error message "${expectedMessage}", but got "${e.message}"`);
+      }
+    }
+    if (!threw) {
+      throw new Error("Expected function to throw, but it did not");
+    }
+  },
 };
