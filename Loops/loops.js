@@ -1,9 +1,9 @@
 function bulkSendCost(numMessages) {
-  let cost = 1.00;
+  let cost = 0;
   let addFee = 0.00;
 
   for(let i = 0; i < numMessages; i++) {
-    cost = cost + addFee;
+    cost += 1.00 + addFee;
     addFee = addFee + 0.01;
   }
   return cost;
