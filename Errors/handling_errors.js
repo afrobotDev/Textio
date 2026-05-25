@@ -5,7 +5,7 @@ function main() {
      logObject(getMessageRecord(3));
      logObject(getMessageRecord(4));
   } catch (err) {
-     console.log(err.message);
+     console.error(err.message);
   }
 }
 
