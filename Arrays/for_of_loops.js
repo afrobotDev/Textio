@@ -1,6 +1,12 @@
 const getCleanMessages = (messages, badWord) => {
   const lowerBadWord = badWord.toLowerCase();
-  return messages.filter(msg => !msg.toLowerCase().includes(lowerBadWord));
+  const cleanMessages = [];
+  for (const msg of messages) {
+    if (!msg.toLowerCase().includes(lowerBadWord)) {
+      cleanMessages.push(msg);
+    }
+  }
+  return cleanMessages;
 };
 
 
