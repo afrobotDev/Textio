@@ -1,5 +1,4 @@
-const promise = updateMessageStatus("M123", "Sending", true);
-const message = await promise;
+const message = await updateMessageStatus("M123", "Sending", true);
 
 console.log(message);
 
