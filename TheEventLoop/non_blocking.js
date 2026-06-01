@@ -1,9 +1,7 @@
-export function sleep(ms) {
-  return new Promise((resolve) => {
+export async function sleep(ms) {
+  await new Promise((resolve) => {
     setTimeout(() => {
       resolve()
-
-    },ms);
-
-  });   
+    }, ms);
+  });
 }
