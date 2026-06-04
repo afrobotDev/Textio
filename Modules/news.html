@@ -64,16 +64,16 @@
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        document.documentElement.classList.add("dark-mode");
+        document.body.classList.add("dark-mode");
       }
       if (
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: light)").matches
       ) {
-        document.documentElement.classList.add("light-mode");
+        document.body.classList.add("light-mode");
       }
     </script>
-    <script type="module">
+    <script>
       import confetti from "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/+esm";
 
       const button = document.getElementById("celebrate");
