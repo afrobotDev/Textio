@@ -72,4 +72,3 @@ describe("createMessage", () => {
     console.log(`- Skip: ${numSkipped} test case(s) for submit`);
   }
 });
-
